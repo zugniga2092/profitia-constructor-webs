@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Cambia [DOMINIO] por el dominio real (por ejemplo https://tunegocio.es) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>[DOMINIO]/</loc></url>
+  <url><loc>[DOMINIO]/aviso-legal.html</loc></url>
+  <url><loc>[DOMINIO]/privacidad.html</loc></url>
+</urlset>

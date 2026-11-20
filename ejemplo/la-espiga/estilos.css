@@ -1,0 +1,847 @@
+/* La Espiga · estilos
+   Dirección «La hora del pan»: colores de pan y los números de la casa en grande. */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("fuentes/fraunces.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("fuentes/figtree.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colores: salen del pan */
+  --corteza: #2B1D14;   /* corteza muy tostada: fondo oscuro y títulos */
+  --miga: #F6EEDF;      /* harina y miga: fondo */
+  --miga-2: #EDE1CB;    /* miga más tostada: bloques */
+  --horno: #A0471A;     /* corteza dorada: acento y números */
+  --horno-2: #853A14;   /* acento al pasar por encima */
+  --trigo: #E3B55B;     /* trigo: acento sobre fondo oscuro */
+  --texto: #3A2A1F;
+  --suave: #6B5646;
+  --raya: #D9C8AB;
+  --raya-oscura: #4A372A;
+
+  /* Letras */
+  --titulos: "Fraunces", Georgia, "Times New Roman", serif;
+  --cuerpo: "Figtree", "Segoe UI", system-ui, sans-serif;
+
+  /* Espacios, de 4 en 4 */
+  --e1: 4px;
+  --e2: 8px;
+  --e3: 12px;
+  --e4: 16px;
+  --e6: 24px;
+  --e8: 32px;
+  --e12: 48px;
+  --e16: 64px;
+  --e24: 96px;
+
+  --curva: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--miga);
+  color: var(--texto);
+  font-family: var(--cuerpo);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, p, ul, ol, dl, dd, table {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--titulos);
+  font-weight: 500;
+  color: var(--corteza);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--horno);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.masa :focus-visible,
+.pie :focus-visible,
+.aviso-ejemplo :focus-visible {
+  outline-color: var(--trigo);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.ancho {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: var(--e4);
+}
+
+.saltar {
+  position: absolute;
+  left: var(--e4);
+  top: -100px;
+  z-index: 20;
+  padding: var(--e3) var(--e4);
+  background: var(--corteza);
+  color: var(--miga);
+}
+
+.saltar:focus {
+  top: var(--e2);
+}
+
+/* ---------- La firma: los números de la casa ---------- */
+
+.cifra {
+  font-family: var(--titulos);
+  font-weight: 600;
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  color: var(--horno);
+}
+
+.cifra--linea {
+  font-size: 1.15em;
+  letter-spacing: -0.01em;
+  line-height: inherit;
+}
+
+.cifra--trigo {
+  color: var(--trigo);
+}
+
+/* ---------- Aviso de web de ejemplo ---------- */
+
+.aviso-ejemplo {
+  padding: var(--e2) var(--e4);
+  background: var(--corteza);
+  color: var(--miga);
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.marca-ejemplo {
+  color: var(--suave);
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+/* ---------- Cabecera ---------- */
+
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--miga);
+  border-bottom: 1px solid var(--raya);
+}
+
+.cabecera__fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 60px;
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e2);
+  min-height: 44px;
+  color: var(--corteza);
+  text-decoration: none;
+}
+
+.marca__espiga {
+  color: var(--horno);
+  flex: none;
+}
+
+.marca__nombre {
+  font-family: var(--titulos);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.menu-boton {
+  display: none;
+  min-width: 44px;
+  min-height: 44px;
+  padding: var(--e2) var(--e4);
+  border: 1.5px solid var(--corteza);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--corteza);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menu {
+  width: 100%;
+  padding-bottom: var(--e3);
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--corteza);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  text-decoration-color: var(--horno);
+}
+
+.menu .menu__whatsapp {
+  color: var(--horno);
+  font-weight: 700;
+}
+
+/* Con JavaScript, en móvil el menú se pliega tras el botón */
+.js .menu-boton {
+  display: inline-block;
+}
+
+.js .menu {
+  display: none;
+}
+
+.js .menu.menu--abierto {
+  display: block;
+}
+
+/* ---------- Botones y enlaces ---------- */
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: var(--e3) var(--e6);
+  border: 2px solid transparent;
+  border-radius: 4px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 200ms var(--curva), color 200ms var(--curva), border-color 200ms var(--curva);
+}
+
+.boton--principal {
+  background: var(--horno);
+  color: #fff;
+}
+
+.boton--principal:hover {
+  background: var(--horno-2);
+}
+
+.boton--linea {
+  border-color: var(--corteza);
+  color: var(--corteza);
+}
+
+.boton--linea:hover {
+  background: var(--corteza);
+  color: var(--miga);
+}
+
+.enlace {
+  display: inline-block;
+  padding-block: var(--e2);
+  color: var(--horno);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
+.enlace:hover {
+  color: var(--horno-2);
+  text-decoration-thickness: 2.5px;
+}
+
+.sobretitulo {
+  color: var(--suave);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.sobretitulo--claro {
+  color: var(--trigo);
+}
+
+.titulo-seccion {
+  max-width: 16ch;
+  font-size: clamp(2rem, 6vw, 3.25rem);
+}
+
+/* ---------- Portada ---------- */
+
+.portada {
+  padding-block: var(--e6) var(--e12);
+}
+
+.portada__rejilla {
+  display: grid;
+  gap: var(--e8);
+}
+
+.portada__titulo {
+  margin-top: var(--e2);
+}
+
+.portada__titulo span {
+  display: block;
+}
+
+.portada__pre,
+.portada__frase {
+  font-size: clamp(1.75rem, 7vw, 3.5rem);
+}
+
+.portada__hora {
+  margin-block: 0.02em 0.08em;
+  margin-left: -0.04em;
+  font-size: clamp(6.5rem, 34vw, 17rem);
+  line-height: 0.82;
+}
+
+.portada__entrada {
+  max-width: 34ch;
+  margin-top: var(--e4);
+  font-size: 1.125rem;
+}
+
+.portada__botones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--e3);
+  margin-top: var(--e6);
+}
+
+.nota {
+  align-self: end;
+  padding: var(--e6);
+  background: var(--miga-2);
+  border-left: 4px solid var(--horno);
+}
+
+.nota__estado {
+  margin-bottom: var(--e3);
+  color: var(--corteza);
+  font-family: var(--titulos);
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.nota__texto + .nota__texto {
+  margin-top: var(--e2);
+}
+
+/* ---------- Lo que sale del horno ---------- */
+
+.horno {
+  padding-block: var(--e12);
+  border-top: 1px solid var(--raya);
+}
+
+.lista-horno {
+  margin-top: var(--e8);
+}
+
+.producto {
+  display: grid;
+  gap: var(--e3);
+  padding-block: var(--e6);
+  border-top: 1px solid var(--raya);
+}
+
+.producto:last-child {
+  border-bottom: 1px solid var(--raya);
+}
+
+.producto__cifra {
+  font-size: clamp(3rem, 13vw, 4.5rem);
+}
+
+.producto--grande .producto__cifra {
+  font-size: clamp(4.5rem, 22vw, 9rem);
+}
+
+.producto h3 {
+  font-size: 1.625rem;
+}
+
+.producto--grande h3 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+}
+
+.producto__cuerpo p {
+  max-width: 52ch;
+  margin-top: var(--e2);
+}
+
+.precios {
+  max-width: 44ch;
+  margin-top: var(--e8);
+  color: var(--corteza);
+  font-family: var(--titulos);
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+/* ---------- La masa: bloque oscuro ---------- */
+
+.masa {
+  padding-block: var(--e16);
+  background: var(--corteza);
+  color: var(--miga);
+}
+
+.masa__rejilla {
+  display: grid;
+  gap: var(--e12);
+}
+
+.masa__frase {
+  margin-top: var(--e3);
+  color: var(--miga);
+  font-size: clamp(2.5rem, 10vw, 5rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.masa__frase .cifra {
+  font-weight: 600;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.masa__explica {
+  max-width: 36ch;
+  margin-top: var(--e6);
+}
+
+.masa__subtitulo {
+  color: var(--miga);
+  font-size: 1.625rem;
+}
+
+.pasos {
+  margin-top: var(--e4);
+}
+
+.paso {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: var(--e4);
+  align-items: baseline;
+  padding-block: var(--e4);
+  border-top: 1px solid var(--raya-oscura);
+}
+
+.paso:last-child {
+  border-bottom: 1px solid var(--raya-oscura);
+}
+
+.paso__cifra {
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+/* ---------- Contacto ---------- */
+
+.contacto {
+  padding-block: var(--e16);
+}
+
+.contacto__rejilla {
+  display: grid;
+  gap: var(--e12);
+}
+
+.contacto__encargo > p {
+  max-width: 44ch;
+  margin-top: var(--e4);
+}
+
+.datos {
+  margin-top: var(--e8);
+  border-top: 1px solid var(--raya);
+}
+
+.datos > div {
+  display: grid;
+  gap: var(--e1);
+  padding-block: var(--e3);
+  border-bottom: 1px solid var(--raya);
+}
+
+.datos dt {
+  color: var(--suave);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contacto__horario {
+  align-self: start;
+  padding: var(--e6);
+  background: var(--miga-2);
+}
+
+.contacto__subtitulo {
+  font-size: 1.625rem;
+}
+
+.estado-linea {
+  margin-top: var(--e2);
+  color: var(--horno);
+  font-weight: 700;
+}
+
+.horario {
+  width: 100%;
+  margin-top: var(--e4);
+  border-collapse: collapse;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.horario th,
+.horario td {
+  padding-block: var(--e3);
+  border-top: 1px solid var(--raya);
+  vertical-align: top;
+}
+
+.horario th {
+  padding-right: var(--e4);
+  color: var(--corteza);
+  font-weight: 600;
+  text-align: left;
+}
+
+.horario td {
+  text-align: right;
+}
+
+.horario td span {
+  display: block;
+}
+
+/* ---------- Pie ---------- */
+
+.pie {
+  padding-block: var(--e8);
+  background: var(--corteza);
+  color: var(--miga);
+}
+
+.pie__fila {
+  display: grid;
+  gap: var(--e4);
+}
+
+.pie__marca {
+  font-family: var(--titulos);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.pie__marca span {
+  display: block;
+  font-family: var(--cuerpo);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.pie__enlaces {
+  display: flex;
+  gap: var(--e6);
+}
+
+.pie__enlaces a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-underline-offset: 4px;
+}
+
+.pie__enlaces a:hover {
+  color: var(--trigo);
+}
+
+.pie__nota {
+  color: #D8C9B2;
+  font-size: 1rem;
+}
+
+/* ---------- Páginas sencillas: legales y 404 ---------- */
+
+.pagina-simple {
+  max-width: 68ch;
+  margin-inline: auto;
+  padding: var(--e8) var(--e4) var(--e16);
+}
+
+.pagina-simple h1 {
+  margin-block: var(--e6);
+  font-size: clamp(2.25rem, 8vw, 3.5rem);
+}
+
+.pagina-simple h2 {
+  margin-top: var(--e8);
+  font-size: 1.5rem;
+}
+
+.pagina-simple p,
+.pagina-simple ul {
+  margin-top: var(--e3);
+}
+
+.pagina-simple ul {
+  padding-left: var(--e6);
+  list-style: disc;
+}
+
+.pagina-simple a {
+  display: inline-block;
+  padding-block: var(--e2);
+  color: var(--horno);
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+
+.pagina-simple small {
+  color: var(--suave);
+  font-size: 1rem;
+}
+
+.pagina-simple .nota-ejemplo {
+  padding: var(--e4);
+  background: var(--miga-2);
+  border-left: 4px solid var(--horno);
+}
+
+/* ---------- Apariciones suaves (solo con JavaScript) ---------- */
+
+.js .aparece {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 500ms var(--curva), transform 500ms var(--curva);
+}
+
+.js .aparece.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Pantallas medianas ---------- */
+
+@media (min-width: 560px) {
+  .ancho {
+    padding-inline: var(--e8);
+  }
+
+  .portada__botones {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .producto {
+    grid-template-columns: 11rem 1fr;
+    gap: var(--e8);
+    align-items: baseline;
+  }
+
+  .producto--grande {
+    grid-template-columns: 1fr;
+    gap: var(--e3);
+  }
+
+  .datos > div {
+    grid-template-columns: 7rem 1fr;
+    gap: var(--e4);
+  }
+}
+
+/* ---------- Pantallas grandes ---------- */
+
+@media (min-width: 900px) {
+  body {
+    font-size: 1.125rem;
+  }
+
+  .cabecera__fila {
+    flex-wrap: nowrap;
+    min-height: 72px;
+  }
+
+  .js .menu-boton {
+    display: none;
+  }
+
+  .menu,
+  .js .menu {
+    display: block;
+    width: auto;
+    padding-bottom: 0;
+  }
+
+  .menu ul {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--e8);
+  }
+
+  .menu .menu__whatsapp {
+    padding-inline: var(--e4);
+    border: 2px solid var(--horno);
+    border-radius: 4px;
+  }
+
+  .menu .menu__whatsapp:hover {
+    background: var(--horno);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .portada {
+    padding-block: var(--e12) var(--e24);
+  }
+
+  .portada__rejilla {
+    grid-template-columns: 7fr 4fr;
+    gap: var(--e16);
+  }
+
+  .portada__entrada {
+    font-size: 1.3125rem;
+  }
+
+  .horno {
+    padding-block: var(--e24);
+  }
+
+  .lista-horno {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    column-gap: var(--e16);
+    margin-top: var(--e12);
+  }
+
+  .producto--grande {
+    grid-row: span 2;
+    align-content: start;
+    border-bottom: 1px solid var(--raya);
+  }
+
+  .producto:not(.producto--grande) {
+    grid-template-columns: 1fr;
+    gap: var(--e3);
+  }
+
+  .masa {
+    padding-block: var(--e24);
+  }
+
+  .masa__rejilla {
+    grid-template-columns: 7fr 5fr;
+    gap: var(--e16);
+    align-items: end;
+  }
+
+  .contacto {
+    padding-block: var(--e24);
+  }
+
+  .contacto__rejilla {
+    grid-template-columns: 7fr 5fr;
+    gap: var(--e16);
+  }
+
+  .contacto__horario {
+    padding: var(--e8);
+  }
+
+  .pie__fila {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .pie__nota {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Sin movimiento para quien lo pide ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .aparece {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .boton {
+    transition: none;
+  }
+}

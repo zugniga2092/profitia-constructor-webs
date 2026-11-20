@@ -1,0 +1,12 @@
+# Tu web y tus fotos no se suben al repositorio del kit
+mi-web/
+mis-cosas/*
+!mis-cosas/LEEME.md
+
+# Secretos y basura del sistema
+.env
+.env.*
+*.key
+.DS_Store
+Thumbs.db
+NUL

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Espiga · Pan de masa madre en Ruzafa, Valencia</title>
+<meta name="description" content="Panadería de barrio en Ruzafa. Pan de masa madre con 24 horas de fermentación, que sale del horno a las 7:30. Encarga por WhatsApp. Web de ejemplo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="La Espiga · Pan de masa madre en Ruzafa">
+<meta property="og:description" content="A las 7:30 sale el pan del horno. Masa madre con 24 horas de fermentación, bollería del día y tartas por encargo.">
+<meta name="theme-color" content="#2B1D14">
+<link rel="preload" href="fuentes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="estilos.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script src="script.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "La Espiga",
+  "description": "Panadería de barrio en Ruzafa (Valencia). Pan de masa madre con 24 horas de fermentación, bollería del día y tartas por encargo. Negocio de ejemplo para una clase: los datos de contacto no son reales.",
+  "telephone": "+34600000000",
+  "email": "hola@laespiga.example",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle de Sueca 00",
+    "postalCode": "46006",
+    "addressLocality": "Valencia",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:30",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "17:00",
+      "closes": "20:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "07:30",
+      "closes": "14:30"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<p class="aviso-ejemplo">Web de ejemplo para una clase: este negocio y sus datos no son reales.</p>
+
+<header class="cabecera">
+  <div class="ancho cabecera__fila">
+    <a class="marca" href="#inicio" aria-label="La Espiga, inicio">
+      <svg class="marca__espiga" viewBox="0 0 24 44" width="18" height="33" aria-hidden="true" focusable="false">
+        <path d="M12 44V14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <ellipse cx="12" cy="7" rx="3" ry="6.2" fill="currentColor"/>
+        <ellipse cx="6.4" cy="16" rx="2.7" ry="5.4" transform="rotate(-28 6.4 16)" fill="currentColor"/>
+        <ellipse cx="17.6" cy="16" rx="2.7" ry="5.4" transform="rotate(28 17.6 16)" fill="currentColor"/>
+        <ellipse cx="6.4" cy="25" rx="2.7" ry="5.4" transform="rotate(-28 6.4 25)" fill="currentColor"/>
+        <ellipse cx="17.6" cy="25" rx="2.7" ry="5.4" transform="rotate(28 17.6 25)" fill="currentColor"/>
+        <ellipse cx="6.4" cy="34" rx="2.7" ry="5.4" transform="rotate(-28 6.4 34)" fill="currentColor"/>
+        <ellipse cx="17.6" cy="34" rx="2.7" ry="5.4" transform="rotate(28 17.6 34)" fill="currentColor"/>
+      </svg>
+      <span class="marca__nombre">La Espiga</span>
+    </a>
+    <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav class="menu" id="menu" aria-label="Secciones de la página">
+      <ul>
+        <li><a href="#horno">Qué horneamos</a></li>
+        <li><a href="#masa">Cómo lo hacemos</a></li>
+        <li><a href="#contacto">Horario y dirección</a></li>
+        <li><a class="menu__whatsapp" href="https://wa.me/34600000000?text=Hola%2C%20La%20Espiga.%20Quiero%20hacer%20un%20encargo%3A%20" rel="noopener">Encargar por WhatsApp</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section class="portada" id="inicio">
+    <div class="ancho portada__rejilla">
+      <div class="portada__principal">
+        <p class="sobretitulo">Panadería de barrio · Ruzafa, Valencia</p>
+        <h1 class="portada__titulo">
+          <span class="portada__pre">A las</span>
+          <span class="cifra portada__hora">7:30</span>
+          <span class="portada__frase">sale el pan del horno.</span>
+        </h1>
+        <p class="portada__entrada">Y la masa empezó ayer. Es pan de masa madre con 24 horas de fermentación, cocido cada mañana.</p>
+        <div class="portada__botones">
+          <a class="boton boton--principal" href="https://wa.me/34600000000?text=Hola%2C%20La%20Espiga.%20Quiero%20hacer%20un%20encargo%3A%20" rel="noopener">Encargar por WhatsApp</a>
+          <a class="boton boton--linea" href="#contacto">Ver horario y dirección</a>
+        </div>
+      </div>
+
+      <aside class="nota" aria-label="Horario de hoy">
+        <p class="nota__estado" data-estado hidden></p>
+        <p class="nota__texto">Abrimos de lunes a sábado desde las <span class="cifra cifra--linea">7:30</span>. Los domingos cerramos.</p>
+        <p class="nota__texto">Calle de Sueca 00, Ruzafa <span class="marca-ejemplo">(dirección de ejemplo)</span></p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="horno" id="horno">
+    <div class="ancho">
+      <h2 class="titulo-seccion aparece">Lo que sale del horno</h2>
+
+      <ul class="lista-horno">
+        <li class="producto producto--grande aparece">
+          <p class="cifra producto__cifra" aria-hidden="true">24 h</p>
+          <div class="producto__cuerpo">
+            <h3>Pan de masa madre</h3>
+            <p>El pan de la casa. La masa fermenta 24 horas y la cocemos cada mañana, así que el que te llevas es de hoy. Si quieres asegurarte el tuyo, encárgalo por WhatsApp y te lo apartamos.</p>
+          </div>
+        </li>
+        <li class="producto aparece">
+          <p class="cifra producto__cifra" aria-hidden="true">Hoy</p>
+          <div class="producto__cuerpo">
+            <h3>Bollería del día</h3>
+            <p>La que ves en el mostrador se ha hecho hoy. Pásate a verla o pregúntanos por WhatsApp qué hay.</p>
+          </div>
+        </li>
+        <li class="producto aparece">
+          <p class="cifra producto__cifra" aria-hidden="true">48 h</p>
+          <div class="producto__cuerpo">
+            <h3>Tartas por encargo</h3>
+            <p>Las hacemos solo si nos las pides. Escríbenos con 48 horas de antelación, como mínimo, y dinos para qué día la quieres.</p>
+            <p><a class="enlace" href="https://wa.me/34600000000?text=Hola%2C%20La%20Espiga.%20Quiero%20encargar%20una%20tarta%20para%20el%20d%C3%ADa%20" rel="noopener">Encargar una tarta por WhatsApp</a></p>
+          </div>
+        </li>
+      </ul>
+
+      <p class="precios aparece">Los precios no están en la web. Pregúntanos por WhatsApp y te los decimos.</p>
+    </div>
+  </section>
+
+  <section class="masa" id="masa">
+    <div class="ancho masa__rejilla">
+      <div class="masa__cita aparece">
+        <p class="sobretitulo sobretitulo--claro">Lo que más nos repiten los clientes</p>
+        <h2 class="masa__frase">«Me dura <span class="cifra cifra--trigo">tres días</span> y sigue bueno».</h2>
+        <p class="masa__explica">Nos lo dicen en el mostrador. Nosotros solo podemos contarte cómo lo hacemos.</p>
+      </div>
+
+      <div class="masa__pasos">
+        <h3 class="masa__subtitulo aparece">Así hacemos el pan</h3>
+        <ol class="pasos">
+          <li class="paso aparece">
+            <p class="cifra cifra--trigo paso__cifra">Ayer</p>
+            <p class="paso__texto">Preparamos la masa con masa madre y la dejamos fermentar.</p>
+          </li>
+          <li class="paso aparece">
+            <p class="cifra cifra--trigo paso__cifra">24 h</p>
+            <p class="paso__texto">Es lo que fermenta cada masa antes de entrar al horno.</p>
+          </li>
+          <li class="paso aparece">
+            <p class="cifra cifra--trigo paso__cifra">7:30</p>
+            <p class="paso__texto">Cocemos cada mañana. A esta hora sale el pan y abrimos la puerta.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="ancho contacto__rejilla">
+      <div class="contacto__encargo aparece">
+        <h2 class="titulo-seccion">Encarga por WhatsApp o pásate por la tienda</h2>
+        <p>Dinos qué quieres y para cuándo. Si es una tarta, avísanos con 48 horas.</p>
+        <p><a class="boton boton--principal" href="https://wa.me/34600000000?text=Hola%2C%20La%20Espiga.%20Quiero%20hacer%20un%20encargo%3A%20" rel="noopener">Escribir por WhatsApp</a></p>
+        <dl class="datos">
+          <div>
+            <dt>WhatsApp</dt>
+            <dd><a class="enlace" href="https://wa.me/34600000000" rel="noopener">+34 600 000 000</a> <span class="marca-ejemplo">(número de ejemplo)</span></dd>
+          </div>
+          <div>
+            <dt>Correo</dt>
+            <dd><a class="enlace" href="mailto:hola@laespiga.example">hola@laespiga.example</a> <span class="marca-ejemplo">(de ejemplo)</span></dd>
+          </div>
+          <div>
+            <dt>Tienda</dt>
+            <dd>Calle de Sueca 00, 46006 Valencia <span class="marca-ejemplo">(dirección de ejemplo)</span><br>
+              <a class="enlace" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+de+Sueca+00%2C+46006+Valencia" rel="noopener">Cómo llegar (abre Google Maps)</a></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="contacto__horario aparece">
+        <h3 class="contacto__subtitulo">Horario</h3>
+        <p class="estado-linea" data-estado hidden></p>
+        <table class="horario">
+          <tbody>
+            <tr>
+              <th scope="row">Lunes a viernes</th>
+              <td><span>7:30 a 14:00</span><span>17:00 a 20:30</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Sábados</th>
+              <td><span>7:30 a 14:30</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Domingos</th>
+              <td><span>Cerrado</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="ancho pie__fila">
+    <p class="pie__marca">La Espiga <span>Panadería de barrio en Ruzafa, Valencia</span></p>
+    <ul class="pie__enlaces">
+      <li><a href="aviso-legal.html">Aviso legal</a></li>
+      <li><a href="privacidad.html">Privacidad</a></li>
+    </ul>
+    <p class="pie__nota">© 2026 La Espiga (negocio de ejemplo). Web hecha para una clase de la Academia Profitia.</p>
+  </div>
+</footer>
+
+</body>
+</html>
