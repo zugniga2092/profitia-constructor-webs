@@ -58,7 +58,7 @@ Toda la explicación de cada paso está en la carpeta `docs/`, por si quieres le
 
 ## Tres consejos de seguridad
 1. Activa la verificación en dos pasos en tu correo, en la cuenta del dominio y en Cloudflare.
-2. Nunca pegues contraseñas en el chat ni las metas en la web.
+2. Nunca pegues contraseñas en el chat ni las pongas en la web.
 3. Si te llega un correo de «tu dominio caduca, paga aquí», no pulses: entra tú en la web de tu registrador.
 
 ## Licencia
