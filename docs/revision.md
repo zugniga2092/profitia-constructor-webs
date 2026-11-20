@@ -7,6 +7,7 @@
 |---|---|
 | En cinco segundos se entiende qué hace, para quién y qué hacer ahora | |
 | El botón principal se ve sin bajar, en móvil y en ordenador | |
+| En el móvil (375 × 667 px), el botón principal está siempre a mano (cabecera o barra fija) | |
 | Pasa la prueba de oro: con otro nombre, no valdría | |
 | Ninguna frase de la lista prohibida de `docs/textos.md` | |
 

@@ -22,6 +22,8 @@ Tres listas, en este orden. Todas tienen que salir bien antes de publicar.
    - Mira el peso de `mi-web/imagenes/` y de la página.
    - Revisa `mi-web/contenido-inventado.md`.
    - Busca enlaces externos sin `rel="noopener"`.
+   - Comprueba en el CSS que, en pantallas estrechas, el botón principal sigue visible sin bajar
+     (en la cabecera o en una barra fija), aunque el menú se pliegue.
 2. Arregla lo que dependa de ti.
 3. Lo que dependa de la persona (su NIF, su dirección, fotos reales, activar la verificación en dos
    pasos), pídeselo en una lista corta y clara.

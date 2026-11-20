@@ -10,6 +10,11 @@ Responde en cinco segundos: **qué haces, para quién y qué hago ahora**.
 - El botón de la acción principal, visible sin bajar.
 - Si hay una buena foto real, aquí.
 
+**En el móvil, el botón principal siempre a mano.** Los títulos grandes empujan el botón hacia abajo y en
+un móvil pequeño (375 × 667 px) deja de verse. Por eso, en pantallas estrechas, la cabecera lleva el
+botón principal al lado del menú (por ejemplo, «WhatsApp»), o hay una barra fija abajo con ese botón.
+Que nunca tape contenido: deja espacio al final de la página.
+
 ## 2. Lo que ofreces
 Tres o cuatro cosas, no veinte. Cada una: qué es, para quién y qué consigue el cliente.
 Si hay muchos servicios, agrúpalos por familias.
