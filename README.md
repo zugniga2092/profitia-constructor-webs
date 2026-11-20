@@ -22,19 +22,25 @@ Hecho por [Profitia](https://profitia.digital) para la comunidad de la Academia.
 ## Cómo empezar
 
 **1. Descarga el kit.** Elige una:
-- Con Git: abre la terminal y escribe
+- **La más fácil:** en esta página, botón verde **Code** → **Download ZIP**. Descomprímelo (clic derecho →
+  «Extraer todo»). Te queda una carpeta llamada `profitia-constructor-webs-main`.
+- **Con Git:** abre la terminal (en Windows busca «PowerShell»; en Mac, «Terminal») y escribe:
   ```
   git clone https://github.com/zugniga2092/profitia-constructor-webs.git
   ```
-- Sin Git: en esta página, botón verde **Code** → **Download ZIP**, y descomprímelo.
 
 **2. Si tienes logo o fotos**, guárdalos en la carpeta `mis-cosas`.
 
 **3. Abre Claude Code en la carpeta del kit.**
-- En la terminal: `cd profitia-constructor-webs` y luego `claude`.
-- En la app de Claude: pestaña **Code** → elige la carpeta.
+- **En la app de Claude** (lo más sencillo): pestaña **Code** → elige la carpeta del kit.
+- **En la terminal:** entra en la carpeta (`cd profitia-constructor-webs`, o `cd profitia-constructor-webs-main`
+  si lo bajaste en ZIP) y escribe `claude`.
 
 **4. Escríbele:** «Hola, quiero hacer la web de mi negocio». A partir de ahí te guía él.
+Si no sabes qué contestar a algo, dile «decide tú». Si no entiendes algo, pregúntale: te lo explica.
+
+> Cuando Claude Code te pida permiso para crear archivos o abrir algo, lee qué va a hacer y dile que sí.
+> Si no entiendes lo que pide, pregúntale antes «¿qué hace esto?».
 
 ## Cómo trabaja
 | | Qué pasa | Qué haces tú |
