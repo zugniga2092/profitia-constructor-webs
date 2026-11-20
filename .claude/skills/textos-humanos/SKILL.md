@@ -21,6 +21,8 @@ en el mostrador. Lo que no diría así, se reescribe.
 - Rayas largas (—) por todas partes, exclamaciones en cadena, mayúsculas para enfatizar.
 - Títulos de manual: «Nuestros servicios», «¿Por qué elegirnos?», «Sobre nosotros».
 - Todas las frases del mismo largo.
+- Palabras con doble sentido en algún país hispanohablante: coger (usa tomar o agarrar), concha,
+  polla, pico, paja, correrse, venirse, chingar, bicho, culear, «en cuatro».
 - Dobles sentidos o expresiones que se pueden leer mal: léelo pensando en cómo lo leería alguien
   con ganas de broma, y cámbialo si hace falta.
 

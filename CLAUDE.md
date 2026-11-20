@@ -14,6 +14,9 @@ parecer hecha a mano para ese negocio, no por una IA.
 - Antes de cada fase, dices en una línea qué vas a hacer y cuánto va a tardar.
 - Si la persona dice «no sé» o «decide tú», decides tú con criterio y le dices qué has elegido y por qué.
 - Nada de entusiasmo falso ni de emojis. Claro y tranquilo, como un buen profesional.
+- Escribe para gente de España y de Latinoamérica: **evita palabras con doble sentido en algún país**.
+  Nunca uses «coger» (di tomar, agarrar, empezar con), «concha», «polla», «pico», «paja» o «pajita»,
+  «correrse», «venirse», «chingar», «bicho», «culear», «en cuatro». Ni en el chat ni en la web.
 
 ## Reglas que no se saltan nunca
 
@@ -46,8 +49,13 @@ Usa la habilidad `adn-negocio` para descubrir qué hace distinto a este negocio.
 ### Fase 2 · Ficha y propuesta — `docs/diseno.md`
 1. Escribe `mi-web/ficha.md` con la plantilla de `plantillas/ficha.md`.
 2. Propón **dos direcciones de diseño claramente distintas**: para cada una, una frase con la idea,
-   la paleta (con colores), la pareja de letras y cómo será la portada. Recomienda una y di por qué.
-3. **Espera a que la persona elija.** Es la única pausa larga antes de construir.
+   los colores **con nombres que se entiendan** («rosa viejo», «crema», «verde botella»; los códigos #…
+   solo en la ficha), el tipo de letra descrito con palabras («redonda y cálida», «ancha como un rótulo»)
+   y cómo será la portada. Recomienda una y di por qué.
+3. Crea `muestras/estilos.html` (fuera de `mi-web`): una página con las dos portadas en pequeño, una
+   al lado de la otra, con sus colores y letras de verdad, para que la persona elija **viéndolas**.
+   Ábresela (Windows `start muestras/estilos.html`, Mac `open muestras/estilos.html`) y dile que la mire.
+4. **Espera a que la persona elija.** Es la única pausa larga antes de construir.
 
 ### Fase 3 · Construcción — `docs/tecnica.md`, `docs/secciones.md`, `docs/textos.md`
 - Copia `plantillas/base/` a `mi-web/` (trae la seguridad, el 404, robots y las páginas legales).
@@ -70,11 +78,16 @@ reales) se lo pides en una lista corta. Enséñale el resultado en una tabla: �
 ### Fase 6 · Publicar — `docs/publicar.md` y `docs/dominio.md`
 Guíale paso a paso para subirla gratis a Cloudflare Pages arrastrando la carpeta `mi-web`, y para
 conectar su dominio. Tú no entras en sus cuentas: le dices qué botón pulsar y qué debería ver.
+- Un paso cada vez: dile el siguiente solo cuando te confirme que ha hecho el anterior.
+- Antes de arrastrar, dile **dónde está exactamente** la carpeta (la ruta completa) y ábresela
+  (Windows `explorer mi-web`, Mac `open mi-web`) para que solo tenga que arrastrarla al navegador.
+- Si se atasca, pídele que te diga qué ve en la pantalla y guíale desde ahí.
 
 ### Fase 7 · Después
 - Cómo hacer cambios: abrir Claude Code en esta carpeta, pedirlo y volver a subir la carpeta.
 - Copia de seguridad: la carpeta `mi-web` ES la web. Que la guarde también en otro sitio.
 - Calendario: que apunte la fecha de renovación del dominio (ver `docs/dominio.md`).
+- ¿Otra web, para otro negocio? Que descargue el kit otra vez en otra carpeta (una carpeta por web).
 
 ## Estructura de esta carpeta
 
@@ -85,6 +98,7 @@ plantillas/          ← ficha, registro de inventado y la base técnica de la w
 .claude/skills/      ← habilidades: adn-negocio, textos-humanos, revisar-web
 mis-cosas/           ← aquí la persona deja su logo, fotos y textos
 mi-web/              ← aquí construyes la web (es lo que se publica)
+muestras/            ← la muestra de los dos estilos para elegir (no se publica)
 ejemplo/             ← una web terminada de un negocio inventado, como listón de calidad
 ```
 
